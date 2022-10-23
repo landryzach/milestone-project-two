@@ -2,9 +2,12 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import MyList from "./components/MyList";
+import AddMovie from "./components/AddMovie";
+import EditMovie from "./components/EditMovie";
 
 // CSS
 import "./App.css";
+
 
 
 function App() {
@@ -14,8 +17,9 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/list" element={<MyList />} />
+      <Route path="/add" element={<AddMovie />} />
+      <Route path="/edit" element={<EditMovie />} />
     </Routes>
-
   );
 }
 

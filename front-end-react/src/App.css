@@ -180,3 +180,44 @@ textarea:focus {
 .item-container {
   width: 500px;
 }
+
+
+
+/* Form CSS in Add & Edit Movie View */
+
+.Form  {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.Form label {
+  text-align: left;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.Form h2 {
+  margin-bottom: 20px;
+}
+
+.Form input, .Form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  display: block;
+  padding: 5px 10px;
+  color: black;
+  font-size: 16px;
+}
+
+.Form .btn {
+  background: #23282F;
+  color: white;
+  font-size: 20px;
+  border: 2px solid white;
+  padding: 10px;
+  cursor: pointer;
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+}
