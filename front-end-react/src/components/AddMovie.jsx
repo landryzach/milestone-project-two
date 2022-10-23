@@ -1,39 +1,48 @@
-
-
 const AddMovie = () => {
 
     return (
         <div className="Form">
             <h2>Add A Movie</h2>
-            <form>
+            <form method="POST" action="/movies">
                 <label>Movie Title: </label>
                 <input 
+                    id="title"
+                    name="title"
                     type="text"
                     required
                 />
                 <label>Picture: </label>
                 <input 
                     type="url"
+                    id="pic"
+                    name="pic"
                 />
                 <label>Release Date: </label>
                 <input 
-                    type="text"
+                    type="number"
+                    id="date"
+                    name="date"
                     required
                 />
-                <label>Duration: </label>
+                <label>Duration (in minutes): </label>
                 <input 
-                    type="text"
+                    type="number"
+                    id="duration"
+                    name="duration"
                 />
                 <label>Genre: </label>
                 <input 
                     type="text"
+                    id="genre"
+                    name="genre"
                     required
                 />
                 <label>Movie Description: </label>
-                <textarea 
+                <textarea
+                    id="description"
+                    name="description" 
                     required
                 />
-                {/* <button>Add Movie</button> */}
                 <input 
                     className="btn"
                     type="submit"
