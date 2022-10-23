@@ -9,14 +9,24 @@ const ListItem = () => {
             className="image"
             src={cover}
             alt="test movie cover"
-            height={"250px"}
+            height={"350px"}
           />
         </div>
         <div className="right">
-          <h2 className="title">Jurassic World Dominion</h2>
-          <h3 className="release-date">2022-10-14</h3>
-          <h3 className="length">111 minutes</h3>
-          <button className="add-movie">add</button>
+          <div className="right-info">
+            <h2 className="title">Jurassic World Dominion</h2>
+            <h4 className="release-info">2022-10-14</h4>
+            <h4 className="length">111 minutes</h4>
+            <h3 className="tagline">
+              Four years after the destruction of Isla Nublar, Biosyn operatives
+              attempt to track down Maisie Lockwood, while Dr Ellie Sattler
+              investigates a genetically engineered swarm of giant insects.
+            </h3>
+          </div>
+          <div className="item-buttons">
+            <button className="edit-movie">edit</button>
+            <button className="delete-movie">delete</button>
+          </div>
         </div>
       </div>
       <h4 className="overview">
