@@ -48,27 +48,16 @@ movie.delete('/:id', (req, res) => {
       })
 })
 
-//POST COMMENT
-movie.post('/:id/comment', (req, res) => {
-    Movie.findById(req.params.id)
-    .then(movie => {
-      Movie.create(req.body)
-      .then(comment => {
-        movie.comments.push(comment.id)
-        movie.save()
-        .then(() => {
-          res.redirect(`/movie/${req.params.id}`)
-        })
-      })
-      .catch(err => {
-        res.render('error404')
-      })
+//UPDATE
+moive.put('/:id', (req, res) => {
+    Movie.findByIdAndUpdate(req.params.id, req.body)
+    .then(() => {
+      res.redirect(`/places/${req.params.id}`)
     })
-  })
-  
-  //DELETE COMMENT
-  movie.delete('/:id/comment/:commentId', (req, res) => {
-    res.send('GET /movie/:id/comment/:commentId stub')
+    .catch(err => {
+      console.log('err', err)
+      res.render('error404')
+    })
   })
   
 
