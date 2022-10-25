@@ -1,3 +1,4 @@
+
 import NavBar from "./NavBar";
 
 const Home = () => {
@@ -9,3 +10,4 @@ const Home = () => {
 };
 
 export default Home;
+
