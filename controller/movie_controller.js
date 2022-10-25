@@ -27,8 +27,8 @@ movie.get('/:id', (req, res) => {
 
 movie.post('/', (req, res) => {
     Movie.create (req.body)
-    .then(() => {
-        res.redirect('/movie')
+    .then(foundMovie => {
+        res.send(foundMovie)
     })
     .catch(err => {
         console.log(err) 
