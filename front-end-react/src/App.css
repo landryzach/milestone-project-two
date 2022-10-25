@@ -133,6 +133,7 @@ textarea:focus {
 }
 
 .search-input {
+  color: black;
   margin-left: 5px;
   font-size: .95em;
   width: 295px;
@@ -166,6 +167,7 @@ textarea:focus {
 }
 
 .nav-link {
+  font-size: 1.2em;
   color: #d7d7d7;
   text-decoration: none;
 }
@@ -230,4 +232,9 @@ textarea:focus {
 
 .right-info > *{
   margin: 0;
+}
+
+.overview {
+  margin-bottom: 0;
+  padding-bottom: 0;
 }

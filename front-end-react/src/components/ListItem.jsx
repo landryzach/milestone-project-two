@@ -29,7 +29,7 @@ const ListItem = () => {
           </div>
         </div>
       </div>
-      <h4 className="overview">
+      <h3 className="overview">
         Four years after her last encounter with masked killer Michael Myers,
         Laurie Strode is living with her granddaughter and trying to finish her
         memoir. Myers hasn't been seen since, and Laurie finally decides to
@@ -37,7 +37,7 @@ const ListItem = () => {
         young man stands accused of murdering a boy that he was babysitting, it
         ignites a cascade of violence and terror that forces Laurie to confront
         the evil she can't control.
-      </h4>
+      </h3>
     </div>
   );
 };
