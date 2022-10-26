@@ -2,7 +2,6 @@ const express = require('express')
 const movie = express.Router()
 const Movie = require('../models/movie.js')
 
-
 movie.get('/', (req, res) => {
     Movie.find()
         .then(foundMovie => {
@@ -17,7 +16,7 @@ movie.get('/', (req, res) => {
 movie.get('/:id', (req, res) => {
     Movie.findById(req.params.id)
         .then(foundMovies => {
-            res.render(foundMovies)
+            res.send(foundMovies)
             })
             .catch(err => {
                 console.log(err) 
@@ -26,6 +25,7 @@ movie.get('/:id', (req, res) => {
         })
 
 movie.post('/', (req, res) => {
+  console.log (req.body)
     Movie.create (req.body)
     .then(foundMovie => {
         res.send(foundMovie)

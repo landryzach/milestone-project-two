@@ -1,4 +1,6 @@
 import { Route, Routes } from "react-router-dom";
+import { useEffect, useState } from "react";
+// Components
 import Home from "./components/Home";
 import MyList from "./components/MyList";
 import AddMovie from "./components/AddMovie";
