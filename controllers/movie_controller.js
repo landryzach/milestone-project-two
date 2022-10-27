@@ -5,8 +5,8 @@ const Movie = require('../models/movie.js')
 
 movie.post('/', (req, res) => {
     Movie.create (req.body)
-    .then(() => {
-        res.redirect('/movie')
+    .then(foundMovie => {
+        res.send(foundMovie)
     })
     .catch(err => {
         console.log(err) 
@@ -48,17 +48,17 @@ movie.delete('/:id', (req, res) => {
       })
 })
 
-//UPDATE
-moive.put('/:id', (req, res) => {
-    Movie.findByIdAndUpdate(req.params.id, req.body)
-    .then(() => {
-      res.redirect(`/places/${req.params.id}`)
+
+movie.put('/:id', (req, res) => {
+  Movie.findByIdAndUpdate(req.params.id, req.body) 
+    .then(updatedMovie => { 
+      res.status(303).redirect('/movie')
     })
     .catch(err => {
-      console.log('err', err)
+      console.log(err) 
       res.render('error404')
     })
-  })
+})
   
 
 module.exports = movie 

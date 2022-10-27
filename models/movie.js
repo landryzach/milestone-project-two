@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const { Schema } = mongoose
 
 const movieSchema = new Schema({
-    name: { type: String, required: true },
+    title: { type: String, required: true },
     date_released: { type: Number },
     genre: { type: String },
     description: { type: String },
