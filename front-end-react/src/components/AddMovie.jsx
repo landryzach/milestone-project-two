@@ -3,21 +3,21 @@ const AddMovie = () => {
     return (
         <div className="Form">
             <h2>Add A Movie</h2>
+            {/* method is the HTTP verb and action is the destination path */}
             <form method="POST" action="/movies">
                 <label>Movie Title: </label>
                 <input 
                     id="title"
                     name="title"
-                    type="text"
                     required
                 />
-                <label>Picture: </label>
+                <label>Image URL: </label>
                 <input 
                     type="url"
-                    id="pic"
-                    name="pic"
+                    id="image"
+                    name="image"
                 />
-                <label>Release Date: </label>
+                <label>Date Released (year): </label>
                 <input 
                     type="number"
                     id="date"
@@ -35,7 +35,6 @@ const AddMovie = () => {
                     type="text"
                     id="genre"
                     name="genre"
-                    required
                 />
                 <label>Movie Description: </label>
                 <textarea

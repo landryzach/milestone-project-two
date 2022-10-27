@@ -11,14 +11,14 @@ const EditMovie = (data) => {
                     value={data.movie.title}
                     required
                 />
-                <label>Picture: </label>
+                <label>Image URL: </label>
                 <input 
                     type="url"
-                    id="pic"
-                    name="pic"
-                    value={data.movie.pic}
+                    id="image"
+                    name="image"
+                    value={data.movie.image}
                 />
-                <label>Release Date: </label>
+                <label>Date Released (year): </label>
                 <input 
                     type="number"
                     id="date"
@@ -39,7 +39,6 @@ const EditMovie = (data) => {
                     id="genre"
                     name="genre"
                     value={data.movie.genre}
-                    required
                 />
                 <label>Movie Description: </label>
                 <textarea
