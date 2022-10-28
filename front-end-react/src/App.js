@@ -2,7 +2,7 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import MyList from "./components/MyList";
-import AddMovie from "./components/AddMovie";
+import NewMovie from "./components/NewMovie";
 import EditMovie from "./components/EditMovie";
 
 // CSS
@@ -17,7 +17,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/list" element={<MyList />} />
-      <Route path="/add" element={<AddMovie />} />
+      <Route path="/new" element={<NewMovie />} />
       <Route path="/edit" element={<EditMovie />} />
     </Routes>
   );

@@ -1,11 +1,11 @@
 import NavBar from "./NavBar";
 
-const AddMovie = () => {
+const NewMovie = () => {
 
     return (
         
         <div className="Form">
-            <h2>Add A Movie</h2>
+            <h2>Add A New Movie</h2>
             {/* method is the HTTP verb and action is the destination path */}
             <form method="POST" action="/movies">
                 <label>Movie Title: </label>
@@ -55,4 +55,4 @@ const AddMovie = () => {
     )
 }
 
-export default AddMovie;
+export default NewMovie;

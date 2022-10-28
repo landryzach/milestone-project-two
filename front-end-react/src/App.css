@@ -97,7 +97,7 @@ button {
 }
 
 .add-movie {
-  
+  background-color: #1F9640;
   
 }
 
@@ -175,7 +175,7 @@ textarea:focus {
   margin-left: 20px;
 }
 
-.add-movie {
+.new-movie {
   margin-left: 20px;
 }
 
