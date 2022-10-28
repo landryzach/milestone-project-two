@@ -1,6 +1,9 @@
+import NavBar from "./NavBar";
+
 const AddMovie = () => {
 
     return (
+        
         <div className="Form">
             <h2>Add A Movie</h2>
             {/* method is the HTTP verb and action is the destination path */}

@@ -98,7 +98,7 @@ button {
 
 .add-movie {
   
-  background-color: #1F9640;
+  
 }
 
 .edit-movie {
@@ -172,6 +172,10 @@ textarea:focus {
 }
 
 .my-list {
+  margin-left: 20px;
+}
+
+.add-movie {
   margin-left: 20px;
 }
 

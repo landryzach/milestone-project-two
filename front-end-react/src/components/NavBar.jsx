@@ -21,6 +21,9 @@ const NavBar = () => {
           <Link to="/list" className="my-list nav-link">
             my list
           </Link>
+          <Link to="/add" className="add-movie nav-link">
+            new movie
+          </Link>
         </div>
       </div>
     </nav>
