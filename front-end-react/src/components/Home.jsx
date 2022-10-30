@@ -8,7 +8,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await fetch("http://192.168.1.165:3001/movie", {
+      const data = await fetch("/movie", {
         mode: "cors",
       });
       const jsonData = await data.json();

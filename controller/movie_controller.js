@@ -3,6 +3,7 @@ const movie = express.Router()
 const Movie = require('../models/movie.js')
 
 movie.get('/', (req, res) => {
+  console.log('WE SMACKED /movies routes!!!')
     Movie.find()
         .then(foundMovie => {
             res.send(foundMovie)
@@ -25,7 +26,7 @@ movie.get('/:id', (req, res) => {
         })
 
 movie.post('/', (req, res) => {
-  console.log (req.body)
+  console.log('BODY in post for moivie route!',req.body)
     Movie.create (req.body)
     .then(foundMovie => {
         res.send(foundMovie)
