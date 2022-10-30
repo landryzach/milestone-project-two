@@ -1,11 +1,27 @@
 import NavBar from "./NavBar";
 
 import {useState} from 'react'
+import { urlencoded } from "express";
 
 const NewMovie = () => {
 
     const [title, setTitle] = useState('')
     console.log('title!!!', title)
+
+    const [image, setImage] = useState('')
+    console.log('image!!!', image)
+
+    const [date, setDate] = useState('')
+    console.log('date!!!', date)
+
+    const [duration, setDuration] = useState('')
+    console.log('duration!!!', duration)
+
+    const [genre, setGenre] = useState('')
+    console.log('genre!!!', genre)
+
+    const [description, setDescription] = useState('')
+    console.log('description!!!', description)
 
     const saveMovie = async ()=> {
         console.log('We are about to save!!!!!')
@@ -14,6 +30,11 @@ const NewMovie = () => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
               title: title,
+              image: image,
+              date: date,
+              duration: duration,
+              genre: genre,
+              description: description
               
             })
           };
@@ -21,7 +42,7 @@ const NewMovie = () => {
         const data = await fetch('/movie', requestOptions)
          console.log('time to save movei!!', data)
     }
-    
+
     return (
         
         <div className="Form">
@@ -41,6 +62,7 @@ const NewMovie = () => {
                     type="url"
                     id="image"
                     name="image"
+                    onChange={(e)=> {setImage(e.target.value)}}
                 />
                 <label>Date Released (year): </label>
                 <input 
@@ -48,24 +70,28 @@ const NewMovie = () => {
                     id="date"
                     name="date"
                     required
+                    onChange={(e)=> {setDate(e.target.value)}}
                 />
                 <label>Duration (in minutes): </label>
                 <input 
                     type="number"
                     id="duration"
                     name="duration"
+                    onChange={(e)=> {setDuration(e.target.value)}}
                 />
                 <label>Genre: </label>
                 <input 
                     type="text"
                     id="genre"
                     name="genre"
+                    onChange={(e)=> {setGenre(e.target.value)}}
                 />
                 <label>Movie Description: </label>
                 <textarea
                     id="description"
                     name="description" 
                     required
+                    onChange={(e)=> {setDescription(e.target.value)}}
                 />
                 <input 
                 onClick={saveMovie}
