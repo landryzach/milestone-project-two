@@ -1,33 +1,52 @@
-import cover from "../assets/images/cover.webp";
+import { useState } from "react";
 
-const ListItem = () => {
-  return (
-    <div className="item-container">
-      <div className="top-info">
-        <div className="left">
-          <img
-            className="image"
-            src={cover}
-            alt="test movie cover"
-            height={"250px"}
-          />
-        </div>
-        <div className="right">
-          <h2 className="title">Jurassic World Dominion</h2>
-          <h3 className="release-date">2022-10-14</h3>
-          <h3 className="length">111 minutes</h3>
-          <button className="add-movie">add</button>
-        </div>
+const ListItem = ({ props }) => {
+  const [view, setView] = useState(false);
+
+  const simpleView = () => {
+    return (
+      <div className="movie-simple" key={props.i}>
+        <h2>{props.title}</h2>
       </div>
-      <h4 className="overview">
-        Four years after her last encounter with masked killer Michael Myers,
-        Laurie Strode is living with her granddaughter and trying to finish her
-        memoir. Myers hasn't been seen since, and Laurie finally decides to
-        liberate herself from rage and fear and embrace life. However, when a
-        young man stands accused of murdering a boy that he was babysitting, it
-        ignites a cascade of violence and terror that forces Laurie to confront
-        the evil she can't control.
-      </h4>
+    );
+  };
+  const detailedView = () => {
+    return (
+      <div className="item-container">
+        <div className="top-info">
+          <div className="left">
+            <img
+              className="image"
+              src={`http://via.placeholder.com/350x500`}
+              alt={`${props.title} cover`}
+              height={"350px"}
+            />
+          </div>
+          <div className="right">
+            <div className="right-info">
+              <h2 className="title">{props.title}</h2>
+              <h4 className="release-info">{props.date_released}</h4>
+              <h4 className="genre">{props.genre}</h4>
+              <h4 className="length">{props.duration}</h4>
+              <h3 className="tagline">
+                {props.tagline !== ""
+                  ? props.tagline
+                  : "This movie does not have a tagline."}
+              </h3>
+            </div>
+            <div className="item-buttons">
+              <button className="edit-movie">edit</button>
+              <button className="delete-movie">delete</button>
+            </div>
+          </div>
+        </div>
+        <h3 className="overview">{props.description}</h3>
+      </div>
+    );
+  };
+  return (
+    <div className="view-container" onClick={() => setView(!view)}>
+      {view ? detailedView() : simpleView()}
     </div>
   );
 };
