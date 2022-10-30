@@ -1,38 +1,182 @@
-.App {
-  text-align: center;
+/* Font Config */
+@font-face {
+  font-family: 'antipastro';
+  src: url(./assets/fonts/Antipastro/Antipastro-Thin.ttf)
+    format('opentype');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+  font-family: 'antipastro';
+  src: url(./assets/fonts/Antipastro/Antipastro-Extralight.ttf)
+    format('opentype');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+  font-family: 'antipastro';
+  src: url(./assets/fonts/Antipastro/Antipastro-Light.ttf)
+    format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+  font-family: 'antipastro';
+  src: url(./assets/fonts/Antipastro/Antipastro-Regular.ttf)
+    format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+  font-family: 'antipastro';
+  src: url(./assets/fonts/Antipastro/Antipastro-Bold.ttf)
+    format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+  font-family: 'antipastro';
+  src: url(./assets/fonts/Antipastro/Antipastro-Extrabold.ttf)
+    format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+  font-family: 'antipastro-icons';
+  src: url(./assets/fonts/Antipastro/Antipastro-Medium.ttf)
+
+    format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+  font-family: 'typo_round';
+  src: url(./assets/fonts/Typo_Round/Typo_Round-Thin.otf)
+    format('opentype');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+  font-family: 'typo_round';
+  src: url(./assets/fonts/Typo_Round/Typo_Round-Light.otf)
+    format('opentype');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+  font-family: 'typo_round';
+  src: url(./assets/fonts/Typo_Round/Typo_Round-Regular.otf)
+    format('opentype');
+    font-weight: 300;
+    font-style: normal;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* GENERAL */
+html {
+  background-color: #23282F;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+* {
+  font-family: 'antipastro';
+  font-weight: 400;
+  color: #ffffff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* BUTTONS */
+button {
   color: white;
+  font-family: 'typo_round';
+  font-weight: 200;
+  font-size: 1.5em;
+  padding: .25em 1.5em;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.add-movie {
+  
+  background-color: #1F9640;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.edit-movie {
+
+}
+
+.delete-movie {
+
+}
+
+input:focus,
+button:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* SEARCHBAR */
+.search-container {
+  display: flex;
+  align-items: center;
+  margin: 2em;
+  width: 350px;
+  height: 40px;
+  border-radius: 100px;
+  background-color: #d7d7d7;
+}
+
+.search-wrapper {
+  margin: auto;
+  width: 330px;
+}
+
+.search-input {
+  margin-left: 5px;
+  font-size: .95em;
+  width: 295px;
+  border: none;
+  background-color: transparent;
+}
+
+.search-icon {
+  float: right;
+  height: 20px;
+}
+
+/* NAVBAR */
+.main-nav {
+  background-color: #1E2227;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px;
+  width: 60%;
+  margin: auto;
+}
+
+.nav-logo a img{
+  height: 18px;
+  float: left;
+}
+
+.nav-link {
+  color: #d7d7d7;
+  text-decoration: none;
+}
+
+.my-list {
+  margin-left: 20px;
+}
+
+/* Large Movie View */
+
+.item-container {
+  width: 500px;
 }
