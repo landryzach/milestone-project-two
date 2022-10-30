@@ -89,7 +89,7 @@ button {
   color: white;
   font-family: 'typo_round';
   font-weight: 200;
-  font-size: 1.5em;
+  font-size: 1.25em;
   padding: .25em 1.5em;
   border: none;
   border-radius: 100px;
@@ -102,11 +102,11 @@ button {
 }
 
 .edit-movie {
-
+  background-color: #FFCC49;
 }
 
 .delete-movie {
-
+  background-color: #FF3F3F;
 }
 
 input:focus,
@@ -120,6 +120,7 @@ textarea:focus {
 /* SEARCHBAR */
 .search-container {
   display: flex;
+  position: sticky;
   align-items: center;
   margin: 2em;
   width: 350px;
@@ -134,6 +135,7 @@ textarea:focus {
 }
 
 .search-input {
+  color: black;
   margin-left: 5px;
   font-size: .95em;
   width: 295px;
@@ -167,6 +169,7 @@ textarea:focus {
 }
 
 .nav-link {
+  font-size: 1.2em;
   color: #d7d7d7;
   text-decoration: none;
 }
@@ -175,18 +178,91 @@ textarea:focus {
   margin-left: 20px;
 }
 
+
 .new-movie {
   margin-left: 20px;
+}
+
+/* Small Movie View */
+
+.movie-library {
+  width: 40%;
+  margin: auto;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 5em;
+}
+
+.movie-simple {
+  background-color: #20252D;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 2px;
+}
+
+.movie-simple h2 {
+  color: #9d9d9d;
+  margin: 0;
 }
 
 /* Large Movie View */
 
 .item-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 1.5em;
+  border: 1px solid;
+  border-image: radial-gradient(#D288FF 65%, #24CAFF );
+  border-image-slice: 1;
   width: 500px;
 }
 
+.top-info {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
 
+.top-info > * {
+  width: fit-content;
+}
 
+.item-buttons > .delete-movie {
+  margin-left: .5em;
+  display: inline-block;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.5em;
+  justify-content: space-evenly;
+}
+.right-info > h2.title {
+  font-size: 2.5em;
+}
+
+.right-info > h4 {
+  color: #d7d7d7;
+}
+
+.right-info > .length {
+  margin-bottom: .5em;
+}
+
+.right-info > h3 {
+  font-size: 18px;
+}
+
+.right-info > * {
+  margin: 0;
+}
+
+.overview {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
 /* Form CSS in Add & Edit Movie View */
 
 .Form  {
@@ -225,3 +301,4 @@ textarea:focus {
   text-align: center;
   margin: 0 auto;
 }
+
