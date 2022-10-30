@@ -1,7 +1,7 @@
 import NavBar from "./NavBar";
 
 import {useState} from 'react'
-import { urlencoded } from "express";
+
 
 const NewMovie = () => {
 
