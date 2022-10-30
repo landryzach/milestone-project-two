@@ -10,7 +10,17 @@ const ListItem = ({ props }) => {
       </div>
     );
   };
+
+  
   const detailedView = () => {
+
+    const deleteMovie = async (id) => {
+
+      console.log('ID of person to delte!!', id);
+      //fetch !! for delte we need the id!
+    }
+
+
     return (
       <div className="item-container">
         <div className="top-info">
@@ -36,7 +46,7 @@ const ListItem = ({ props }) => {
             </div>
             <div className="item-buttons">
               <button className="edit-movie">edit</button>
-              <button className="delete-movie">delete</button>
+              <button className="delete-movie" onClick={() =>deleteMovie(props._id)}>delete</button>
             </div>
           </div>
         </div>
