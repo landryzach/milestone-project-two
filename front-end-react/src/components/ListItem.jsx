@@ -10,6 +10,8 @@ const ListItem = ({ props }) => {
       </div>
     );
   };
+
+  
   const detailedView = () => {
 
     const deleteMovie = async (id)=> {
@@ -51,7 +53,6 @@ const ListItem = ({ props }) => {
             </div>
             <div className="item-buttons">
               <button className="edit-movie">edit</button>
-
               <button onClick={ () => deleteMovie(props._id) } className="delete-movie">delete</button>
             </div>
           </div>

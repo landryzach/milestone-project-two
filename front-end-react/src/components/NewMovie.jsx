@@ -2,6 +2,7 @@ import NavBar from "./NavBar";
 
 import {useState} from 'react'
 
+
 const NewMovie = () => {
 
     const [title, setTitle] = useState('')
@@ -42,7 +43,7 @@ const NewMovie = () => {
         const data = await fetch('/movie', requestOptions)
          console.log('time to save movie!!', data)
     }
-    
+
     return (
         
         <div className="Form">
