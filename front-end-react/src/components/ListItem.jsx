@@ -1,11 +1,20 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import EditMovie from "./EditMovie";
 
 const ListItem = ({ props }) => {
   const [view, setView] = useState(false);
 
+  const navigate = useNavigate();
+
+  const editMovie = (id) => {
+    navigate('/edit/'+id)
+   
+  }
+
   const simpleView = () => {
     return (
-      <div className="movie-simple" key={props.i}>
+      <div className="movie-simple" key={props.id}>
         <h2>{props.title}</h2>
       </div>
     );
@@ -48,13 +57,9 @@ const ListItem = ({ props }) => {
               </h3>
             </div>
             <div className="item-buttons">
-              <button className="edit-movie">edit</button>
-              <button
-                onClick={() => deleteMovie(props._id)}
-                className="delete-movie"
-              >
-                delete
-              </button>
+              {/* <button className="edit-movie">edit</button> */}
+              <button onClick={ () => editMovie(props._id) } className="edit-movie">edit</button>
+              <button onClick={ () => deleteMovie(props._id) } className="delete-movie">delete</button>
             </div>
           </div>
         </div>
@@ -70,3 +75,7 @@ const ListItem = ({ props }) => {
 };
 
 export default ListItem;
+
+
+
+
