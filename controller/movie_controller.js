@@ -41,7 +41,6 @@ movie.delete('/:id', (req, res) => {
     Movie.findByIdAndDelete(req.params.id) 
       .then(deletedMovie => { 
         res.json(deletedMovie)
-       // res.status(303).redirect('/movie')
       })
       .catch(err => {
         console.log(err) 
@@ -53,7 +52,6 @@ movie.put('/:id', (req, res) => {
   Movie.findByIdAndUpdate(req.params.id, req.body) 
     .then(updatedMovie => { 
       res.json(updatedMovie)
-      // res.status(303).redirect('/movie')
     })
     .catch(err => {
       console.log(err) 
