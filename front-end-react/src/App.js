@@ -12,7 +12,6 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/list" element={<MyList />} />
       <Route path="/new" element={<NewMovie />} />
       <Route path="/edit" element={<EditMovie />} />
     </Routes>

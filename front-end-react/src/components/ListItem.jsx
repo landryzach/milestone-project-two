@@ -11,22 +11,18 @@ const ListItem = ({ props }) => {
     );
   };
 
-  
   const detailedView = () => {
-
-    const deleteMovie = async (id)=> {
-      console.log('We are about to delete!!!!!', id)
+    const deleteMovie = async (id) => {
+      console.log("We are about to delete!!!!!", id);
       const requestOptions = {
-          method: 'DELETE',
-          headers: { 'Content-Type': 'application/json' }
-          
-        };
-       // do our fetch stuff!!
-      const data = await fetch(`/movie/${id}`, requestOptions)
-       console.log('time to delete movie!!', data)
-       window.location.reload()
-  }
-
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+      };
+      // do our fetch stuff!!
+      const data = await fetch(`/movie/${id}`, requestOptions);
+      console.log("time to delete movie!!", data);
+      window.location.reload();
+    };
 
     return (
       <div className="item-container">
@@ -44,7 +40,7 @@ const ListItem = ({ props }) => {
               <h2 className="title">{props.title}</h2>
               <h4 className="release-info">{props.date_released}</h4>
               <h4 className="genre">{props.genre}</h4>
-              <h4 className="length">{props.duration}</h4>
+              <h4 className="length">{`${props.duration} minutes`}</h4>
               <h3 className="tagline">
                 {props.tagline !== ""
                   ? props.tagline
@@ -53,7 +49,12 @@ const ListItem = ({ props }) => {
             </div>
             <div className="item-buttons">
               <button className="edit-movie">edit</button>
-              <button onClick={ () => deleteMovie(props._id) } className="delete-movie">delete</button>
+              <button
+                onClick={() => deleteMovie(props._id)}
+                className="delete-movie"
+              >
+                delete
+              </button>
             </div>
           </div>
         </div>
