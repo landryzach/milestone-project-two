@@ -1,6 +1,15 @@
 import { useState } from "react";
+import { useNavigate} from 'react-router-dom'
+
 
 const ListItem = ({ props }) => {
+
+  const navigate = useNavigate();
+
+    const editMovie = () => {
+      navigate('/edit')
+    }
+
   const [view, setView] = useState(false);
 
   const simpleView = () => {
@@ -12,6 +21,16 @@ const ListItem = ({ props }) => {
   };
   const detailedView = () => {
 
+    // const editMovie = async (id)=> {
+    //   console.log('We are about to edit!!!!!', id)
+      
+    //    // do our fetch stuff!!
+    //   const data = await fetch(`/movie/${id}`, requestOptions)
+    //    console.log('time to edit movie!!', data)
+    //    window.location.reload()
+    // }
+    
+  
     const deleteMovie = async (id)=> {
       console.log('We are about to delete!!!!!', id)
       const requestOptions = {
@@ -23,8 +42,7 @@ const ListItem = ({ props }) => {
       const data = await fetch(`/movie/${id}`, requestOptions)
        console.log('time to delete movie!!', data)
        window.location.reload()
-  }
-
+    }
 
     return (
       <div className="item-container">
@@ -50,7 +68,7 @@ const ListItem = ({ props }) => {
               </h3>
             </div>
             <div className="item-buttons">
-              <button className="edit-movie">edit</button>
+              <button onClick={ () => editMovie(props._id) } className="edit-movie">edit</button>
 
               <button onClick={ () => deleteMovie(props._id) } className="delete-movie">delete</button>
             </div>
@@ -65,6 +83,8 @@ const ListItem = ({ props }) => {
       {view ? detailedView() : simpleView()}
     </div>
   );
-};
+}
+  
+ 
 
 export default ListItem;

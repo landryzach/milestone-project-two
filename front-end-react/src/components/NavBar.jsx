@@ -16,13 +16,10 @@ const NavBar = () => {
         </div>
         <div className="nav-links">
           <Link to="/" className="home nav-link">
-            home
-          </Link>
-          <Link to="/list" className="my-list nav-link">
-            my list
+            list
           </Link>
           <Link to="/new" className="new-movie nav-link">
-            new movie
+            add movie
           </Link>
         </div>
       </div>
