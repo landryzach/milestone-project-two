@@ -11,12 +11,9 @@ const NavBar = () => {
             <img src={logo} alt="Movie list logo" />
           </Link>
         </div>
-        <div className="nav-searchbar">
-          <SearchBar />
-        </div>
         <div className="nav-links">
           <Link to="/" className="home nav-link">
-            list
+            home
           </Link>
           <Link to="/new" className="new-movie nav-link">
             add movie
