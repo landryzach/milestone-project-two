@@ -1,11 +1,18 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const ListItem = ({ props }) => {
   const [view, setView] = useState(false);
 
+  const navigate = useNavigate();
+
+  const editTheMovie = () => {
+    navigate('/edit')
+  }
+
   const simpleView = () => {
     return (
-      <div className="movie-simple" key={props.i}>
+      <div className="movie-simple" key={props.id}>
         <h2>{props.title}</h2>
       </div>
     );
@@ -13,7 +20,6 @@ const ListItem = ({ props }) => {
 
   
   const detailedView = () => {
-
     const deleteMovie = async (id)=> {
       console.log('We are about to delete!!!!!', id)
       const requestOptions = {
@@ -26,7 +32,6 @@ const ListItem = ({ props }) => {
        console.log('time to delete movie!!', data)
        window.location.reload()
   }
-
 
     return (
       <div className="item-container">
@@ -52,7 +57,8 @@ const ListItem = ({ props }) => {
               </h3>
             </div>
             <div className="item-buttons">
-              <button className="edit-movie">edit</button>
+              {/* <button className="edit-movie">edit</button> */}
+              <button onClick={ () => editTheMovie(props._id) } className="edit-movie">edit</button>
               <button onClick={ () => deleteMovie(props._id) } className="delete-movie">delete</button>
             </div>
           </div>
@@ -69,3 +75,7 @@ const ListItem = ({ props }) => {
 };
 
 export default ListItem;
+
+
+
+
