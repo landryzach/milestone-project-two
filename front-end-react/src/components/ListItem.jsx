@@ -19,6 +19,8 @@ const ListItem = ({ props }) => {
       </div>
     );
   };
+
+  
   const detailedView = () => {
 
     // const editMovie = async (id)=> {
