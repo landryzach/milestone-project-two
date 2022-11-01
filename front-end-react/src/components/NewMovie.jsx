@@ -1,5 +1,4 @@
 import NavBar from "./NavBar";
-
 import {useState} from 'react'
 import { Navigate } from "react-router-dom";
 
@@ -46,8 +45,9 @@ const NewMovie = () => {
     }
 
     return (
-        
-        <div className="Form">
+        <div>
+            <NavBar />
+            <div className="Form">
             <h2>Add A New Movie</h2>
             {/* method is the HTTP verb and action is the destination path */}
             {/* <form method="POST" action="/movie"> */}
@@ -95,13 +95,15 @@ const NewMovie = () => {
                     required
                 />
                 <input 
-                onClick={saveMovie}
+                    onClick={saveMovie}
                     className="btn"
                    // type="submit"
                     value="Add Movie"
                 />
             </form>
         </div>
+        </div>
+        
     )
 }
 
