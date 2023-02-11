@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "name": "demo",
+    "name": "milestone-project-two",
     "builds": [
        { "src": "server.js", "use": "@vercel/node" }
     ],
