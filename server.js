@@ -14,7 +14,7 @@ mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopolo
   () => { console.log('connected to mongo: ', process.env.MONGO_URI) }
 )
 
-//app.use(express.static(path.join(__dirname, 'front-end-react', 'build')))
+app.use(express.static(path.join(__dirname, 'front-end-react', 'build')))
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, 'front-end-react', 'build'));
