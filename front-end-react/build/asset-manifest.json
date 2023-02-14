@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.42891ddb.css",
+    "main.js": "/static/js/main.fcb3569b.js",
+    "static/js/787.dfba6593.chunk.js": "/static/js/787.dfba6593.chunk.js",
+    "static/media/Antipastro-Bold.ttf": "/static/media/Antipastro-Bold.d5013460dd3c4e053678.ttf",
+    "static/media/Antipastro-Light.ttf": "/static/media/Antipastro-Light.13450006e9ad9a25954a.ttf",
+    "static/media/Antipastro-Extrabold.ttf": "/static/media/Antipastro-Extrabold.ccea5f6cccc57c09adc0.ttf",
+    "static/media/Antipastro-Regular.ttf": "/static/media/Antipastro-Regular.24897a579f1218a262ad.ttf",
+    "static/media/Antipastro-Extralight.ttf": "/static/media/Antipastro-Extralight.c0e3ca5c4098c3aa69a5.ttf",
+    "static/media/Antipastro-Thin.ttf": "/static/media/Antipastro-Thin.352d745b853419a3c6ef.ttf",
+    "static/media/Typo_Round-Thin.otf": "/static/media/Typo_Round-Thin.9e84efefe26416775649.otf",
+    "static/media/Typo_Round-Regular.otf": "/static/media/Typo_Round-Regular.09215ec0cf1741548fb3.otf",
+    "static/media/Typo_Round-Light.otf": "/static/media/Typo_Round-Light.dba024ded7cf42675af7.otf",
+    "static/media/Antipastro-Medium.ttf": "/static/media/Antipastro-Medium.c03ed4c4ad067dc1bf2d.ttf",
+    "static/media/movielist.png": "/static/media/movielist.07da3bd6527040ca2592.png",
+    "index.html": "/index.html",
+    "main.42891ddb.css.map": "/static/css/main.42891ddb.css.map",
+    "main.fcb3569b.js.map": "/static/js/main.fcb3569b.js.map",
+    "787.dfba6593.chunk.js.map": "/static/js/787.dfba6593.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.42891ddb.css",
+    "static/js/main.fcb3569b.js"
+  ]
+}
